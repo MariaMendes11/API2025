@@ -1,24 +1,19 @@
 const connect = require("../db/connect");
+const validateUser = require("../services/validateUser")
+const validadeCpf = require("../services/validateCpf")
 
 module.exports = class userController {
   static async createUser(req, res) {
     const { cpf, email, password, name, data_nascimento } = req.body;
 
-    if (!cpf || !email || !password || !name || !data_nascimento) {
-      return res
-        .status(400)
-        .json({ error: "Todos os campos devem ser preenchidos" });
-    } // else if
-    else if (isNaN(cpf) || cpf.length !== 11) {
-      return res.status(400).json({
-        error: "CPF inválido. Deve conter exatamente 11 dígitos numéricos",
-      });
-    } // else if
-    else if (!email.includes("@")) {
-      return res.status(400).json({ error: "Email inválido. Deve conter @" });
-    } // else if
-    else {
-      // Construção da query INSERT
+    const validation = validateUser(req.body)
+    if(validation){
+      return res.status(400).json(validation)
+    }
+    const cpfValidation = await validadeCpf(cpf,null)
+    if(cpfValidation){
+      return res.status(400).json(cpfValidation)
+    }
 
       const query = `INSERT INTO usuario (cpf,password,email,name,data_nascimento) VALUES(
       '${cpf}',
@@ -56,36 +51,24 @@ module.exports = class userController {
         res.status(500).json({ error: "Erro Interno de Servidor" });
       } // catch
     } // else
-  } // CreateUser
+   // CreateUser
 
   static async getAllUsers(req, res) {
-    const query = `SELECT * FROM usuario`;
-
-    try {
-      connect.query(query, function (err, results) {
-        if (err) {
-          console.error(err);
-          return res.status(500).json({ error: "Erro Interno do Servidor" });
-        }
-        return res
-          .status(200)
-          .json({ message: "Lista de Usuários", users: results });
-      });
-    } catch (error) {
-      console.error("Erro ao executar consulta:", error);
-      res.status(500).json({ error: "Erro Interno de Servidor" });
-    } // catch (error)
-  } //getAllUsers
+  } 
 
   static async updateUser(req, res) {
     const { id_usuario, name, email, password, cpf } = req.body;
-    if (!name || !email || !password || !cpf || !data_nascimento) {
-      return res
-        .status(400)
-        .json({ error: "Todos os campos devem ser preenchidos" });
-    }
+     const validation = validateUser(req.body)
+     if(validation){
+      return res.status(400).json(validation)
+     }
+     const cpfValidation = await validadeCpf(cpf,id)
+     if(cpfValidation){
+      return res.status(400).json(cpfValidation)
+     }
     const query = `UPDATE usuario SET name=?, email=?, password=?, cpf=? WHERE id_usuario=?`;
     const values = [name, email, password, cpf, id_usuario];
+
     try {
       connect.query(query, values, function (err, results) {
         if (err) {
