@@ -60,3 +60,44 @@ delimiter ;
 
     delimiter ;
 
+-- procedure para resumo do usuário
+delimiter $$
+
+create procedure resumo_usuario(in pid int)
+begin
+    declare nome varchar(100);
+    declare email varchar(100);
+    declare totalrs decimal(10,2);
+    declare faixa varchar(20);
+
+    -- busca o nome e o email do usuário
+    select u.name, u.email into nome, email
+    from usuario u
+    where u.id_usuario = pid;
+
+    -- Chamada das funções específicas já criadas 
+    set totalrs = calcula_total_gasto(pid);
+    set faixa = buscar_faixa_etaria_usuario(pid);
+
+    -- Mostra os dados formatados
+    select nome as nome_usuario,
+        email as email_usuario,
+        totalrs as total_usuario,
+        faixa as faixa_etaria;
+end ; $$
+delimiter ;
+
+DELIMITER //
+create procedure resumo_evento(IN id_evento INT)
+begin
+    select 
+        e.nome AS nome,
+        e.data_hora as data,
+        total_ingressos_vendidos(e.id_evento) AS ingressos_vendidos,
+        renda_total_evento(e.id_evento) AS renda_arrecadado
+    from evento e
+    where e.id_evento = id_evento;
+end; //
+
+DELIMITER ;
+
