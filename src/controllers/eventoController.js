@@ -191,4 +191,3 @@ module.exports = class eventoController {
     }
   } // fim do 'getEventosPorData7Dias'
 };
-

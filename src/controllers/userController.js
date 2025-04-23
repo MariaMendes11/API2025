@@ -105,7 +105,7 @@ module.exports = class userController {
     }
   }
   static async deleteUser(req, res) {
-    const userId = req.params.id;
+    const userId = req.params.id_usuario;
     const query = `DELETE FROM usuario WHERE id_usuario = ?`;
     const values = [userId];
 
