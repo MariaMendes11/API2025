@@ -40,7 +40,7 @@ CREATE TABLE `compra` (
 
 LOCK TABLES `compra` WRITE;
 /*!40000 ALTER TABLE `compra` DISABLE KEYS */;
-INSERT INTO `compra` VALUES (1,'2024-11-14 19:04:00',1),(2,'2024-11-13 17:00:00',1),(3,'2024-11-12 15:30:00',2),(4,'2024-11-11 14:20:00',2),(5,'2024-11-14 19:04:00',1),(6,'2024-11-13 17:00:00',1),(7,'2024-11-12 15:30:00',2),(8,'2024-11-11 14:20:00',2),(9,'2024-11-14 19:04:00',1),(10,'2024-11-13 17:00:00',1),(11,'2024-11-12 15:30:00',2),(12,'2024-11-11 14:20:00',2),(13,'2024-11-14 19:04:00',1),(14,'2024-11-13 17:00:00',1),(15,'2024-11-12 15:30:00',2),(16,'2024-11-11 14:20:00',2),(17,'2024-11-14 19:04:00',1),(18,'2024-11-13 17:00:00',1),(19,'2024-11-12 15:30:00',2),(20,'2024-11-11 14:20:00',2),(21,'2024-11-14 19:04:00',1),(22,'2024-11-13 17:00:00',1),(23,'2024-11-12 15:30:00',2),(24,'2024-11-11 14:20:00',2),(25,'2024-11-14 19:04:00',1),(26,'2024-11-13 17:00:00',1),(27,'2024-11-12 15:30:00',2),(28,'2024-11-11 14:20:00',2),(29,'2024-11-14 19:04:00',1),(30,'2024-11-13 17:00:00',1),(31,'2024-11-12 15:30:00',2),(32,'2024-11-11 14:20:00',2),(33,'2024-11-14 19:04:00',1),(34,'2024-11-13 17:00:00',1),(35,'2024-11-12 15:30:00',2),(36,'2024-11-11 14:20:00',2);
+INSERT INTO `compra` VALUES (1,'2024-11-14 19:04:00',1),(2,'2024-11-13 17:00:00',1),(3,'2024-11-12 15:30:00',2),(4,'2024-11-11 14:20:00',2);
 /*!40000 ALTER TABLE `compra` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +61,7 @@ CREATE TABLE `evento` (
   PRIMARY KEY (`id_evento`),
   KEY `fk_id_organizador` (`fk_id_organizador`),
   CONSTRAINT `evento_ibfk_1` FOREIGN KEY (`fk_id_organizador`) REFERENCES `organizador` (`id_organizador`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,9 +70,29 @@ CREATE TABLE `evento` (
 
 LOCK TABLES `evento` WRITE;
 /*!40000 ALTER TABLE `evento` DISABLE KEYS */;
-INSERT INTO `evento` VALUES (1,'Festival de Verão','evento de verao','2024-12-15 00:00:00','Praia Central',1),(2,'Congresso de Tecnologia','Evento de tecnologia','2024-11-20 00:00:00','Centro de convencoes',2),(3,'Show Internacional','Evento internacional','2024-10-30 00:00:00','Arena Principal',3),(4,'Festival de Verão','evento de verao','2024-12-15 00:00:00','Praia Central',1),(5,'Congresso de Tecnologia','Evento de tecnologia','2024-11-20 00:00:00','Centro de convencoes',2),(6,'Show Internacional','Evento internacional','2024-10-30 00:00:00','Arena Principal',3),(7,'Festival de Verão','evento de verao','2024-12-15 00:00:00','Praia Central',1),(8,'Congresso de Tecnologia','Evento de tecnologia','2024-11-20 00:00:00','Centro de convencoes',2),(9,'Show Internacional','Evento internacional','2024-10-30 00:00:00','Arena Principal',3),(10,'Festival de Verão','evento de verao','2024-12-15 00:00:00','Praia Central',1),(11,'Congresso de Tecnologia','Evento de tecnologia','2024-11-20 00:00:00','Centro de convencoes',2),(12,'Show Internacional','Evento internacional','2024-10-30 00:00:00','Arena Principal',3),(13,'Festival de Verão','evento de verao','2024-12-15 00:00:00','Praia Central',1),(14,'Congresso de Tecnologia','Evento de tecnologia','2024-11-20 00:00:00','Centro de convencoes',2),(15,'Show Internacional','Evento internacional','2024-10-30 00:00:00','Arena Principal',3),(16,'Festival de Verão','evento de verao','2024-12-15 00:00:00','Praia Central',1),(17,'Congresso de Tecnologia','Evento de tecnologia','2024-11-20 00:00:00','Centro de convencoes',2),(18,'Show Internacional','Evento internacional','2024-10-30 00:00:00','Arena Principal',3),(19,'Festival de Verão','evento de verao','2024-12-15 00:00:00','Praia Central',1),(20,'Congresso de Tecnologia','Evento de tecnologia','2024-11-20 00:00:00','Centro de convencoes',2),(21,'Show Internacional','Evento internacional','2024-10-30 00:00:00','Arena Principal',3),(22,'Festival de Verão','evento de verao','2024-12-15 00:00:00','Praia Central',1),(23,'Congresso de Tecnologia','Evento de tecnologia','2024-11-20 00:00:00','Centro de convencoes',2),(24,'Show Internacional','Evento internacional','2024-10-30 00:00:00','Arena Principal',3),(25,'Festival de Verão','evento de verao','2024-12-15 00:00:00','Praia Central',1),(26,'Congresso de Tecnologia','Evento de tecnologia','2024-11-20 00:00:00','Centro de convencoes',2),(27,'Show Internacional','Evento internacional','2024-10-30 00:00:00','Arena Principal',3);
+INSERT INTO `evento` VALUES (1,'Festival de Verão','evento de verao','2024-12-15 00:00:00','Praia Central',1),(2,'Congresso de Tecnologia','Evento de tecnologia','2024-11-20 00:00:00','Centro de convencoes',2),(3,'Show Internacional','Evento internacional','2024-10-30 00:00:00','Arena Principal',3),(28,'Feira Cultural de Inverno','Evento cultural com musica e gastronomia','2025-07-20 18:00:00','Teatro Central',1);
 /*!40000 ALTER TABLE `evento` ENABLE KEYS */;
 UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`alunods`@`%`*/ /*!50003 TRIGGER `impedir_alteracao_evento_passado` BEFORE UPDATE ON `evento` FOR EACH ROW begin
+    if old.data_hora < curdate() then
+        signal sqlstate '45000'
+        set message_text = 'Não é permitido alterar eventos que já ocorreram.';
+    end if;
+end */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 
 --
 -- Table structure for table `ingresso`
@@ -89,7 +109,7 @@ CREATE TABLE `ingresso` (
   PRIMARY KEY (`id_ingresso`),
   KEY `fk_id_evento` (`fk_id_evento`),
   CONSTRAINT `ingresso_ibfk_1` FOREIGN KEY (`fk_id_evento`) REFERENCES `evento` (`id_evento`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -98,7 +118,7 @@ CREATE TABLE `ingresso` (
 
 LOCK TABLES `ingresso` WRITE;
 /*!40000 ALTER TABLE `ingresso` DISABLE KEYS */;
-INSERT INTO `ingresso` VALUES (1,500.00,'vip',1),(2,150.00,'pista',1),(3,200.00,'pista',2),(4,600.00,'vip',3),(5,250.00,'pista',3),(6,500.00,'vip',1),(7,150.00,'pista',1),(8,200.00,'pista',2),(9,600.00,'vip',3),(10,250.00,'pista',3),(11,500.00,'vip',1),(12,150.00,'pista',1),(13,200.00,'pista',2),(14,600.00,'vip',3),(15,250.00,'pista',3),(16,500.00,'vip',1),(17,150.00,'pista',1),(18,200.00,'pista',2),(19,600.00,'vip',3),(20,250.00,'pista',3),(21,500.00,'vip',1),(22,150.00,'pista',1),(23,200.00,'pista',2),(24,600.00,'vip',3),(25,250.00,'pista',3),(26,500.00,'vip',1),(27,150.00,'pista',1),(28,200.00,'pista',2),(29,600.00,'vip',3),(30,250.00,'pista',3),(31,500.00,'vip',1),(32,150.00,'pista',1),(33,200.00,'pista',2),(34,600.00,'vip',3),(35,250.00,'pista',3),(36,500.00,'vip',1),(37,150.00,'pista',1),(38,200.00,'pista',2),(39,600.00,'vip',3),(40,250.00,'pista',3),(41,500.00,'vip',1),(42,150.00,'pista',1),(43,200.00,'pista',2),(44,600.00,'vip',3),(45,250.00,'pista',3);
+INSERT INTO `ingresso` VALUES (1,500.00,'vip',1),(2,150.00,'pista',1),(3,200.00,'pista',2),(4,600.00,'vip',3),(5,250.00,'pista',3),(50,120.00,'vip',28),(51,60.00,'pista',28);
 /*!40000 ALTER TABLE `ingresso` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -128,8 +148,61 @@ CREATE TABLE `ingresso_compra` (
 
 LOCK TABLES `ingresso_compra` WRITE;
 /*!40000 ALTER TABLE `ingresso_compra` DISABLE KEYS */;
-INSERT INTO `ingresso_compra` VALUES (1,5,4,1),(2,2,5,1),(3,1,1,2),(4,2,2,2),(5,5,4,1),(6,2,5,1),(7,1,1,2),(8,2,2,2),(9,5,4,1),(10,2,5,1),(11,1,1,2),(12,2,2,2),(13,5,4,1),(14,2,5,1),(15,1,1,2),(16,2,2,2),(17,5,4,1),(18,2,5,1),(19,1,1,2),(20,2,2,2),(21,5,4,1),(22,2,5,1),(23,1,1,2),(24,2,2,2),(25,5,4,1),(26,2,5,1),(27,1,1,2),(28,2,2,2),(29,5,4,1),(30,2,5,1),(31,1,1,2),(32,2,2,2),(33,5,4,1),(34,2,5,1),(35,1,1,2),(36,2,2,2);
+INSERT INTO `ingresso_compra` VALUES (1,5,4,1),(2,2,5,1),(3,1,1,2),(4,2,2,2),(5,5,4,1);
 /*!40000 ALTER TABLE `ingresso_compra` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`alunods`@`%`*/ /*!50003 TRIGGER `verifica_data_evento` BEFORE INSERT ON `ingresso_compra` FOR EACH ROW begin
+    declare data_evento datetime;
+
+    -- Buscar data do evento
+    select e.data_hora into data_evento
+    from ingresso i
+    join evento e on i.fk_id_evento = e.id_evento  
+    where i.id_ingresso = new.fk_id_ingresso;
+
+    -- Verificar se o evento já ocorreu
+    if date(data_evento) < curdate() then
+        signal sqlstate '45000'
+        set message_text = 'Não é possível comprar ingressos para eventos passados.';
+    end if;
+end */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+
+--
+-- Table structure for table `log_evento`
+--
+
+DROP TABLE IF EXISTS `log_evento`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `log_evento` (
+  `id_log` int NOT NULL AUTO_INCREMENT,
+  `mensagem` varchar(255) DEFAULT NULL,
+  `data_log` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_log`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `log_evento`
+--
+
+LOCK TABLES `log_evento` WRITE;
+/*!40000 ALTER TABLE `log_evento` DISABLE KEYS */;
+/*!40000 ALTER TABLE `log_evento` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -226,6 +299,430 @@ UNLOCK TABLES;
 --
 -- Dumping routines for database 'vio_maria'
 --
+/*!50003 DROP FUNCTION IF EXISTS `buscar_faixa_etaria_usuario` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`alunods`@`%` FUNCTION `buscar_faixa_etaria_usuario`(pid int) RETURNS varchar(20) CHARSET utf8mb4
+    READS SQL DATA
+begin
+    declare nascimento date;
+    declare faixa varchar(20);
+    
+    select data_nascimento into nascimento
+    from usuario
+    where id_usuario = pid;
+
+    set faixa = faixa_etaria(nascimento);
+
+    return faixa;
+end ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP FUNCTION IF EXISTS `calcula_idade` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`alunods`@`%` FUNCTION `calcula_idade`(datanascimento DATE) RETURNS int
+    DETERMINISTIC
+BEGIN
+    DECLARE idade INT;
+    SET idade = TIMESTAMPDIFF(YEAR, datanascimento, CURDATE());
+    RETURN idade;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP FUNCTION IF EXISTS `calcula_total_gasto` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`alunods`@`%` FUNCTION `calcula_total_gasto`(pid_usuario INT) RETURNS decimal(10,2)
+    READS SQL DATA
+BEGIN 
+    DECLARE total DECIMAL(10, 2);
+
+    SELECT SUM(i.preco * ic.quantidade) 
+    INTO total
+    FROM compra c
+    JOIN ingresso_compra ic ON c.id_compra = ic.fk_id_compra
+    JOIN ingresso i ON i.id_ingresso = ic.fk_id_ingresso
+    WHERE c.fk_id_usuario = pid_usuario;
+
+    RETURN IFNULL(total, 0);
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP FUNCTION IF EXISTS `faixa_etaria` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`alunods`@`%` FUNCTION `faixa_etaria`(data_nascimento date) RETURNS varchar(20) CHARSET utf8mb4
+begin
+    declare idade int;
+
+    -- calculo da idade com a função já criada
+    set idade = calcula_idade(data_nascimento);
+
+    if idade < 18 then 
+        return "menor de idade";
+    elseif idade < 60 then 
+        return "adulto";
+    else 
+        return "idoso";
+    end if;
+end ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP FUNCTION IF EXISTS `media_idade` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`alunods`@`%` FUNCTION `media_idade`() RETURNS decimal(5,2)
+    READS SQL DATA
+begin
+    declare media decimal(5,2);
+
+    -- cálculo da média das idades 
+    select avg(timestampdiff(year, data_nascimento, curdate())) into media from usuario;
+
+    return ifnull(media, 0);
+end ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP FUNCTION IF EXISTS `mensagem_boas_vindas` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`alunods`@`%` FUNCTION `mensagem_boas_vindas`(nome_usuario varchar(100)) RETURNS varchar(255) CHARSET utf8mb4
+    DETERMINISTIC
+begin
+    declare msg varchar(255);
+    set msg = concat('Olá, ', nome_usuario, '! Seja bem-vindo(a) ao sistema VIO');
+    return msg;
+end ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP FUNCTION IF EXISTS `renda_total_evento` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`alunods`@`%` FUNCTION `renda_total_evento`(id_evento INT) RETURNS decimal(10,2)
+    READS SQL DATA
+    DETERMINISTIC
+begin
+    declare total decimal(10,2);
+
+    select ifnull(SUM(i.preco * ic.quantidade), 0)
+    into total
+    from ingresso_compra ic
+    join ingresso i ON ic.fk_id_ingresso = i.id_ingresso
+    where i.fk_id_evento = id_evento;
+
+    return total;
+end ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP FUNCTION IF EXISTS `status_sistema` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`alunods`@`%` FUNCTION `status_sistema`() RETURNS varchar(50) CHARSET utf8mb4
+    NO SQL
+begin 
+    return 'Sistema operando normalmente';
+end ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP FUNCTION IF EXISTS `total_compras_usario` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`alunods`@`%` FUNCTION `total_compras_usario`(id_usuario int) RETURNS int
+    READS SQL DATA
+begin
+    declare total int;
+
+    select count(*) into total
+    from compra 
+    where id_usuario = compra.fk_id_usuario;
+
+    return total;
+end ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP FUNCTION IF EXISTS `total_ingressos_vendidos` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`alunods`@`%` FUNCTION `total_ingressos_vendidos`(id_evento INT) RETURNS int
+    READS SQL DATA
+    DETERMINISTIC
+begin
+    declare total INT;
+
+    select ifnull(SUM(ic.quantidade), 0)
+    into total
+    from ingresso_compra ic
+    join ingresso i ON ic.fk_id_ingresso = i.id_ingresso
+    where i.fk_id_evento = id_evento;
+
+    return total;
+end ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `registrar_compra` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`alunods`@`%` PROCEDURE `registrar_compra`(
+    in p_id_usuario int,
+    in p_id_ingressos int,
+    in p_quantidade int
+)
+begin
+    declare v_id_compra int;
+    declare v_data_evento datetime;
+    
+    select e.data_hora into v_data_evento
+    from ingresso i 
+    join evento e on i.fk_id_evento = e.id_evento
+    where i.id_ingresso = p_id_ingresso;
+
+    -- verificar se adata do evento é menor do que a atual
+    if date(v_data_evento) < curdate() then 
+        signal sqlstate '45000'
+        set message_text = 'ERRO_PROCEDURE - não é possivel comprar ingressos para eventos passados.';
+     end if;
+
+    -- Criar registro na tabela 'compra'
+    insert into compra (data_compra, fk_id_usuario)
+    values (now(), p_id_usuario);
+
+    -- Obter o ID da compra recém-criada
+    set v_id_compra = last_insert_id();
+
+    -- Registrar os ingressos comprados
+    insert into ingresso_compra (fk_id_compra, fk_id_ingresso, quantidade)
+    values (v_id_compra, p_id_ingressos, p_quantidade);
+
+end ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `registrar_presenca` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`alunods`@`%` PROCEDURE `registrar_presenca`(
+        in p_id_compra int,
+        in p_id_evento int
+    )
+begin
+        -- Registrar presença
+        insert into presenca (data_hora_checkin, fk_id_evento, fk_id_compra)
+        values (now(), p_id_evento, p_id_compra);
+    end ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `resumo_evento` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`alunods`@`%` PROCEDURE `resumo_evento`(IN id_evento INT)
+begin
+    select 
+        e.nome AS nome,
+        e.data_hora as data,
+        total_ingressos_vendidos(e.id_evento) AS ingressos_vendidos,
+        renda_total_evento(e.id_evento) AS renda_arrecadado
+    from evento e
+    where e.id_evento = id_evento;
+end ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `resumo_usuario` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`alunods`@`%` PROCEDURE `resumo_usuario`(in pid int)
+begin
+    declare nome varchar(100);
+    declare email varchar(100);
+    declare totalrs decimal(10,2);
+    declare faixa varchar(20);
+
+    -- busca o nome e o email do usuário
+    select u.name, u.email into nome, email
+    from usuario u
+    where u.id_usuario = pid;
+
+    -- Chamada das funções específicas já criadas 
+    set totalrs = calcula_total_gasto(pid);
+    set faixa = buscar_faixa_etaria_usuario(pid);
+
+    -- Mostra os dados formatados
+    select nome as nome_usuario,
+        email as email_usuario,
+        totalrs as total_usuario,
+        faixa as faixa_etaria;
+end ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `total_ingressos_usuario` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`alunods`@`%` PROCEDURE `total_ingressos_usuario`(
+        in p_id_usuario int,
+        out p_total_ingressos int
+    )
+begin
+        -- Inicializar o valor de saída 
+        set p_total_ingressos = 0;
+
+        -- Consultar e somar todos ps ingressos comprados pelo usuário
+        select coalesce(sum(ic.quantidade), 0)
+        into p_total_ingressos
+        from ingresso_compra ic 
+        join compra c on ic.fk_id_compra = c.id_compra
+        where c.fk_id_usuario = p_id_usuario;
+    end ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -236,4 +733,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-03-10 10:58:48
+-- Dump completed on 2025-05-12 14:12:18
