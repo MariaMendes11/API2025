@@ -24,7 +24,7 @@ services:
       MYSQL_DATABASE: vio_maria
       ## Mapeia a porta 3306 do container para a porta 3306 da máquina
     ports:
-      - "3307:3307"
+      - "3307:3306"
     volumes: 
       - db_data:/var/lib/mysql
       - ./mysql-init:/docker-entrypoint-initdb.d

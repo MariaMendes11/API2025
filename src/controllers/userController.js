@@ -169,7 +169,7 @@ module.exports = class userController {
         const token = jwt.sign(
           {id: user.id_usuario},
           process.env.SECRET,
-          {expiresIn:"1h",}
+          {expiresIn:"30s",}
         );
 
         //remove atributo de um obj
